@@ -1,0 +1,65 @@
+import java.util.Random;  
+
+import java.util.Scanner;  
+
+  
+
+public class Main {  
+
+    public static void main(String[] args) {  
+
+        Scanner leitura = new Scanner(System.in);  
+
+        Random randomizacao = new Random();  
+
+        int choose = 0;  
+
+        int tentativas = 0;  
+
+        int cpu = randomizacao.nextInt(10) + 1;  
+
+  
+
+        while (tentativas <= 5) {  
+
+            System.out.println("Tente adivinhar o numero escolhido");  
+
+            choose = leitura.nextInt();  
+
+            if (choose == cpu){  
+
+                System.out.println("Parabens voceh acertou!");  
+
+                break;  
+
+            }else {  
+
+                System.out.println("Voceh errou...");  
+
+                tentativas++;  
+
+                if (choose < cpu){  
+
+                    System.out.println("O numero eh maior");  
+
+                }else{  
+
+                    System.out.println("O numero eh menor");  
+
+                }  
+
+            }  
+
+            if (tentativas == 5){  
+
+                System.out.println("Acabaram as tentativas, o numero escolhido foi " + cpu);  
+
+                break;  
+
+            }        
+
+         }  
+
+    }  
+
+} 
